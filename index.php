@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    <?php   
+    
+        session_start();
+    
+    ?>
+
     <div class="bgimg"></div>
     <div class="loginForm">
         <form action="" class="login">
@@ -21,6 +27,7 @@
             <br>
             <input type="submit" value="Valider" class="submitInput">
         </form>
+        <p id="result">test</p>
     </div>
 </body>
 </html>
