@@ -10,12 +10,12 @@
     <?php   
     
         session_start();
-    
+        $_SESSION["isConnected"] = false
     ?>
 
     <div class="bgimg"></div>
     <div class="loginForm">
-        <form action="" class="login">
+        <form action="phpScript/connection.php" method="POST" class="login">
             <label>Mail</label>
             <br>
             <input type="text" name="mail" id="mail" class="loginInput">
@@ -27,7 +27,14 @@
             <br>
             <input type="submit" value="Valider" class="submitInput">
         </form>
-        <p id="result">test</p>
+        <?php
+            if($_SESSION['isConnected']){
+                echo '<p id="result">ça marche</p>';
+            }
+            else{
+                echo '<p id="result">paco ou marche pas</p>';
+            }
+        ?>
     </div>
 </body>
 </html>
