@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
+    <script src="../scripts/changeResult.js"></script>
     <title>Document</title>
 </head>
 <body>
     <?php   
     
         session_start();
-        $_SESSION["isConnected"] = false
+        if(!isset($_SESSION["isConnected"])){
+            $_SESSION["isConnected"] = false;
+        }
     ?>
 
     <div class="bgimg"></div>
@@ -29,7 +32,7 @@
         </form>
         <?php
             if($_SESSION['isConnected']){
-                echo '<p id="result">ça marche</p>';
+                echo '<p id="result">' . $_SESSION["prenomUser"] .' '. $_SESSION["nomUser"] .'</p>';
             }
             else{
                 echo '<p id="result">paco ou marche pas</p>';

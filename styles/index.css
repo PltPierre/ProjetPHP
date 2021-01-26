@@ -50,3 +50,9 @@ label{
 .submitInput{
     font-size: 1.25em;
 }
+
+#result{
+    color: white;
+    font-size: large;
+}
+
